@@ -1,0 +1,51 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.MySQLDialect
+		</property>
+		
+		<property name="hibernate.connection.driver_class">
+			com.mysql.jdbc.Driver
+		</property>
+		
+		<property name="hibernate.connection.url">
+			jdbc:mysql:///888
+		</property>
+		
+		<property name="hibernate.connection.username">
+			root
+		</property>
+		
+		<property name="hibernate.connection.password">
+			
+		</property>
+		
+		<property name="hibernate.hbm2ddl.auto">
+			create
+		</property>
+		
+		<property name="show_sql">true</property>
+		
+		<property name="hibernate.cache.use_second_level_cache">true</property>
+		<property name="hibernate.cache.provider_class">org.hibernate.cache.OSCacheProvider</property>
+		<!-- <class-cache class="team.tmax.POJO.Person" usage="read-write"/>  -->
+		<property name="hibernate.generate_statistics">true</property>
+		
+		<!-- <mapping resource="com/tmax/pojo/Payment.hbm.xml"/> -->
+		<mapping class="com.model.Admin"/>
+		<mapping class="com.model.Categorie"/>
+		<mapping class="com.model.Commentaire"/>
+		<mapping class="com.model.Commerce"/>
+		<mapping class="com.model.Facture"/>
+		<mapping class="com.model.Horaire"/>
+		<mapping class="com.model.Inscris"/>
+		<mapping class="com.model.Lieux"/>
+		<mapping class="com.model.Note"/>
+		<mapping class="com.model.Professionnel"/>
+		<mapping class="com.model.Publicite"/>
+	</session-factory>
+</hibernate-configuration>
